@@ -33,13 +33,11 @@ def grade():
 
 def piscar(pos):
     """Pisca um azulejo."""
-    claro, escuro = azulejos[pos]
-
-    # TODO:
+       # TODO:
     # 1. desenhe o azulejo com a cor clara
     # 2. espere um tempo
     # 3. desenhe o azulejo com a cor escura
-
+    claro, escuro = azulejos[pos]
     square(pos.x, pos.y, 200, claro)
     update()
     sleep(0.5)
