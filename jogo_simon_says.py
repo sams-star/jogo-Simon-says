@@ -24,7 +24,11 @@ def grade():
     # TODO:
     # Percorra o dicionário azulejos
     # e desenhe cada azulejo usando sua cor escura
-    pass
+    square(0, 0, 200, 'dark red')
+    square(0, -200, 200, 'dark blue')
+    square(-200, 0, 200, 'dark green')
+    square(-200, -200, 200, 'khaki')
+    update()
 
 
 def piscar(pos):
@@ -35,7 +39,13 @@ def piscar(pos):
     # 1. desenhe o azulejo com a cor clara
     # 2. espere um tempo
     # 3. desenhe o azulejo com a cor escura
-    pass
+
+    square(pos.x, pos.y, 200, claro)
+    update()
+    sleep(0.5)
+    square(pos.x, pos.y, 200, escuro)
+    update()
+    sleep(0.5)
 
 
 # -------------------------------------------------
