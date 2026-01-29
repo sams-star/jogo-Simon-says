@@ -12,7 +12,11 @@ azulejos = {
     vector(0, 0): ('red', 'dark red'),
     vector(0, -200): ('blue', 'dark blue'),
     vector(-200, 0): ('green', 'dark green'),
-    vector(-200, -200): ('yellow', 'khaki'),
+    vector(200, -200): ('yellow', 'khaki'),
+    vector(-200, 0): ('pink', 'mediumorchid'),
+    vector(-200, -200): ('purple', 'darkslateblue'),
+    vector(-200, -200): ('aqua', 'darkturquoise'),
+    vector(-200, -200): ('orange', 'darkorange'),
 }
 
 
@@ -28,6 +32,7 @@ def grade():
     square(0, -200, 200, 'dark blue')
     square(-200, 0, 200, 'dark green')
     square(-200, -200, 200, 'khaki')
+
     update()
 
 
@@ -40,10 +45,10 @@ def piscar(pos):
     claro, escuro = azulejos[pos]
     square(pos.x, pos.y, 200, claro)
     update()
-    sleep(0.5)
+    sleep(0.2)
     square(pos.x, pos.y, 200, escuro)
     update()
-    sleep(0.5)
+    sleep(0.2)
 
 
 # -------------------------------------------------
@@ -93,7 +98,7 @@ def iniciar(x, y):
 # -------------------------------------------------
 # Configuração da janela
 # -------------------------------------------------
-setup(420, 420, 370, 0)
+setup(840, 420, 370, 0)
 hideturtle()
 tracer(False)
 
