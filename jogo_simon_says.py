@@ -9,14 +9,17 @@ padrao = []
 palpites = []
 
 azulejos = {
-    vector(0, 0): ('red', 'dark red'),
-    vector(0, -200): ('blue', 'dark blue'),
+  # em cima
+    vector(-400, 0): ('purple', 'darkslateblue'),
     vector(-200, 0): ('green', 'dark green'),
-    vector(-200, -200): ('yellow', 'khaki'),
-    vector(-200, -400): ('pink', 'mediumorchid'),
-    #vector(-400, 0): ('purple', 'darkslateblue'),
-    #vector(-200, -200): ('aqua', 'darkturquoise'),
-    #vector(-200, -200): ('orange', 'darkorange'),
+    vector(0, 0): ('red', 'dark red'),
+    vector(200, 0): ('orange', 'darkorange'),
+    
+    # em baixo
+    vector(-400, -200): ('pink', 'mediumorchid'),
+    vector(-200, -200): ('aqua', 'darkturquoise'),
+    vector(0, -200): ('blue', 'dark blue'),
+    vector(200, -200): ('yellow', 'khaki'),
 }
 
 
@@ -28,17 +31,19 @@ def grade():
     # TODO:
     # Percorra o dicionário azulejos
     # e desenhe cada azulejo usando sua cor escura
-    square(0, 0, 200, 'dark red')
-    square(0, -200, 200, 'dark blue')
-    square(-200, 0, 200, 'dark green')
-    square(-200, -200, 200, 'khaki')
-    square(-400, -200, 200, 'mediumorchid')
-    square(-200, -200, 200, 'darklateblue')
-    square(-200, -200, 200, 'darkturquoise')
-    square(-200, -200, 200, 'darkorange')
+    #square(-400, 0, 200, 'darkslateblue')
+    #square(-200, 0, 200, 'dark green')
+    #square(0, 0, 200, 'dark red')
+    #square(200, 0, 200, 'darkorange')
+    #square(-400, -200, 200, 'mediumorchid')
+    #square(-200, -200, 200, 'darkturquoise')
+    #square(0, -200, 200, 'dark blue')
+    #square(200, -200, 200, 'khaki')
+    for pos, cores in azulejos.items():
+        square(pos.x, pos.y, 200, cores[1])
     
     update()
-
+    sleep(0.1)
 
 def piscar(pos):
     """Pisca um azulejo."""
