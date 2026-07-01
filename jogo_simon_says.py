@@ -82,7 +82,7 @@ def clique(x, y):
 
     indice = len(palpites)
 
-    # Errou
+    
     if pos != padrao[indice]:
         registrar_pontuacao(nome_jogador, pontuacao)
         bye()
@@ -91,7 +91,7 @@ def clique(x, y):
     palpites.append(pos)
     piscar(pos)
 
-    # Acertou a sequência inteira
+    
     if len(palpites) == len(padrao):
         pontuacao += 1
         aumentar_sequencia()

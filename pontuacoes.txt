@@ -10,3 +10,4 @@ sophi:1
 sam:3
 samela:5
 receba:2
+receba:1
